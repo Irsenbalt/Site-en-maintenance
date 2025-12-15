@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site en Maintenance | Revenez plus tard</title>
+    <meta name="description" content="Notre site est actuellement en cours de maintenance. Nous travaillons à améliorer votre expérience. Revenez bientôt !">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+        }
+        
+        .maintenance-container {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://i.ibb.co/v4MB4GRR/Chat-GPT-Image-27-nov-2025-21-10-35.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: brightness(1.5);
+            z-index: 1;
+        }
+        
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+            z-index: 2;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 3;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10rem;
+            color: white;
+        }
+        
+        .title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .animated-text {
+            font-size: 1.8rem;
+            font-weight: 300;
+            margin-top: 30rem;
+            position: relative;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Animation de pulsation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.9;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        
+        /* Animation de texte */
+        @keyframes textGlow {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                             0 0 20px rgba(255, 255, 255, 0.3),
+                             0 0 30px rgba(255, 255, 255, 0.1);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8),
+                             0 0 30px rgba(255, 255, 255, 0.5),
+                             0 0 40px rgba(255, 255, 255, 0.2);
+            }
+        }
+        
+        .pulse-animation {
+            animation: pulse 3s infinite ease-in-out;
+        }
+        
+        .text-glow {
+            animation: textGlow 2s infinite alternate;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .animated-text {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1rem;
+            }
+            
+            .animated-text {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance-container">
+        <div class="background-image"></div>
+        <div class="overlay"></div>
+        
+        <div class="content">
+            <h1 class="title text-glow">MAINTENANCE EN COURS</h1>
+            <div class="animated-text pulse-animation">
+                Site en cours de maintenance, revenez plus tard
+            </div>
+            
+            <!-- Élément décoratif supplémentaire -->
+            <div class="mt-6 flex space-x-4">
+                <div class="w-4 h-4 rounded-full bg-white opacity-70 animate-pulse"></div>
+                <div class="w-4 h-4 rounded-full bg-white opacity-70 animate-pulse" style="animation-delay: 0.2s"></div>
+                <div class="w-4 h-4 rounded-full bg-white opacity-70 animate-pulse" style="animation-delay: 0.4s"></div>
+            </div>
+            
+            <!-- Message secondaire discret -->
+            <p class="mt-6 text-white opacity-70 max-w-md text-sm">
+                Nous travaillons actuellement à améliorer votre expérience. 
+                Le site sera de nouveau accessible très prochainement.
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        // Définir les données
+        const maintenanceMessages = [
+            "Site en cours de maintenance, revenez plus tard",
+            "Nous améliorons votre expérience",
+            "Retour très prochainement",
+            "Travaux en cours..."
+        ];
+        
+        // Animation de changement de texte (optionnel)
+        let currentMessageIndex = 0;
+        const animatedTextElement = document.querySelector('.animated-text');
+        
+        // Fonction pour changer le texte (désactivée par défaut)
+        function changeMaintenanceMessage() {
+            currentMessageIndex = (currentMessageIndex + 1) % maintenanceMessages.length;
+            animatedTextElement.textContent = maintenanceMessages[currentMessageIndex];
+            
+            // Ajouter un effet de fondu
+            animatedTextElement.style.opacity = '0';
+            setTimeout(() => {
+                animatedTextElement.style.opacity = '1';
+                animatedTextElement.style.transition = 'opacity 0.5s ease';
+            }, 50);
+        }
+        
+        // Démarrer l'animation de changement de texte toutes les 5 secondes
+        // Pour activer cette fonctionnalité, décommentez la ligne suivante :
+        // setInterval(changeMaintenanceMessage, 5000);
+        
+        // Empêcher le défilement
+        document.addEventListener('wheel', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+        
+        document.addEventListener('touchmove', function(e) {
+            e.preventDefault();
+        }, { passive: false });
+        
+        document.addEventListener('keydown', function(e) {
+            // Empêcher le défilement avec les touches fléchées et espace
+            if ([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+                e.preventDefault();
+            }
+        }, false);
+        
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log("Site de maintenance chargé");
+            
+            // Précharger l'image de fond suivante pour une transition fluide
+            const nextImage = new Image();
+            nextImage.src = 'https://i.ibb.co/v4MB4GRR/Chat-GPT-Image-27-nov-2025-21-10-35.png';
+            
+            // Changer l'image de fond toutes les 30 secondes (optionnel)
+            setInterval(() => {
+                const randomNum = Math.floor(Math.random() * 10) + 1;
+                document.querySelector('.background-image').style.backgroundImage = 
+                    `url('https://i.ibb.co/v4MB4GRR/Chat-GPT-Image-27-nov-2025-21-10-35.png')`;
+            }, 30000);
+        });
+    </script>
+</body>
+</html>
