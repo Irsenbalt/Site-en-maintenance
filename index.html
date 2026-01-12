@@ -69,6 +69,8 @@
                     padding-top: env(safe-area-inset-top);
                 }
             </style>
+            <link rel="icon" href="https://i.ibb.co/Y7vVhRzh/logo-fond-blanc-rond.png" type="image/png">
+            <link rel="apple-touch-icon" href="https://i.ibb.co/Y7vVhRzh/logo-fond-blanc-rond.png">
         </head>
                 <!-- Legal Modal -->
         <div id="legal-modal"
@@ -125,7 +127,7 @@
                             <a href="#accueil" class="text-gray-700 hover:text-primary font-medium transition-colors" onclick="handleNavigation(event, 'accueil')">Accueil</a>
                             <a href="#services" class="text-gray-700 hover:text-primary font-medium transition-colors" onclick="handleNavigation(event, 'services')">Services</a>
                             <a href="#approche" class="text-gray-700 hover:text-primary font-medium transition-colors" onclick="handleNavigation(event, 'approche')">Notre Approche</a>
-                            <a href="#temoignages" class="text-gray-700 hover:text-primary font-medium transition-colors" onclick="handleNavigation(event, 'temoignages')">Témoignages</a>
+                            <!--a href="#temoignages" class="text-gray-700 hover:text-primary font-medium transition-colors" onclick="handleNavigation(event, 'temoignages')">Témoignages</a-->
                             <a href="#contact" class="bg-primary text-white px-6 py-3 text-base rounded-xl font-medium hover:bg-blue-700 transition-colors" onclick="handleNavigation(event, 'contact')">Contactez-nous</a>
                         </div>
                         
@@ -141,7 +143,7 @@
                             <a href="#accueil" class="text-gray-700 hover:text-primary font-medium py-2" onclick="handleNavigation(event, 'accueil')">Accueil</a>
                             <a href="#services" class="text-gray-700 hover:text-primary font-medium py-2" onclick="handleNavigation(event, 'services')">Services</a>
                             <a href="#approche" class="text-gray-700 hover:text-primary font-medium py-2" onclick="handleNavigation(event, 'approche')">Notre Approche</a>
-                            <a href="#temoignages" class="text-gray-700 hover:text-primary font-medium py-2" onclick="handleNavigation(event, 'temoignages')">Témoignages</a>
+                            <!--a href="#temoignages" class="text-gray-700 hover:text-primary font-medium py-2" onclick="handleNavigation(event, 'temoignages')">Témoignages</a-->
                             <a href="#contact" class="bg-primary text-white px-6 py-3 text-base rounded-xl font-medium hover:bg-blue-700 transition-colors text-center" onclick="handleNavigation(event, 'contact')">Contactez-nous</a>
                         </div>
                     </div>
@@ -254,7 +256,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                         <div>
                             <img 
-                                src="https://picsum.photos/600/400?random=1" 
+                                src="https://i.ibb.co/Xr0mWLz5/modelisation-processus.jpg" 
                                 alt="Équipe de consultants analysant des données opérationnelles" 
                                 class="w-full rounded-xl shadow-lg"
                                 loading="lazy"
@@ -303,7 +305,7 @@
             </section>
 
             <!-- Témoignages Section -->
-            <section id="temoignages" class="py-12 md:py-16 bg-light">
+            <section id="temoignages" class="hidden">
                 <div class="container mx-auto px-6 sm:px-8">
                     <div class="text-center mb-12">
                         <h2 class="text-2xl sm:text-3xl font-bold text-secondary mb-4">Ils nous font confiance</h2>
@@ -510,14 +512,8 @@
                             </div>
                             <p class="text-gray-300 mb-6">Experts en optimisation de la performance opérationnelle pour les entreprises.</p>
                             <div class="flex space-x-4">
-                                <a href="#" class="text-gray-300 hover:text-white" onclick="handleSocialClick('linkedin')">
+                                <a href="https://www.linkedin.com/company/evoni/" class="text-gray-300 hover:text-white" onclick="handleSocialClick('linkedin')">
                                     <i class="fab fa-linkedin-in text-xl"></i>
-                                </a>
-                                <a href="#" class="text-gray-300 hover:text-white" onclick="handleSocialClick('twitter')">
-                                    <i class="fab fa-twitter text-xl"></i>
-                                </a>
-                                <a href="#" class="text-gray-300 hover:text-white" onclick="handleSocialClick('facebook')">
-                                    <i class="fab fa-facebook-f text-xl"></i>
                                 </a>
                             </div>
                         </div>
@@ -529,7 +525,7 @@
                                 <li><a href="#accueil" class="text-gray-300 hover:text-white transition-colors" onclick="handleNavigation(event, 'accueil')">Accueil</a></li>
                                 <li><a href="#services" class="text-gray-300 hover:text-white transition-colors" onclick="handleNavigation(event, 'services')">Services</a></li>
                                 <li><a href="#approche" class="text-gray-300 hover:text-white transition-colors" onclick="handleNavigation(event, 'approche')">Notre Approche</a></li>
-                                <li><a href="#temoignages" class="text-gray-300 hover:text-white transition-colors" onclick="handleNavigation(event, 'temoignages')">Témoignages</a></li>
+                                <!--li><a href="#temoignages" class="text-gray-300 hover:text-white transition-colors" onclick="handleNavigation(event, 'temoignages')">Témoignages</a></li-->
                             </ul>
                         </div>
                         
@@ -679,7 +675,7 @@
                 
                 // Footer link handlers
                 function handleFooterLink(linkType) {
-                    alert("Ouverture de la page " + linkType + " (simuléeR)");
+                    alert("Ouverture de la page " + linkType + " (simulée)");
                 }
                 
                 // Smooth scroll for anchor links
