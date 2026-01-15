@@ -4,7 +4,7 @@
             <base target="_self">
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>EVONI | Performance Digitale</title>
+            <title>EVONI | Performance Opérationnelle</title>
             <meta name="description" content="EVONI accompagne les entreprises dans l'optimisation de leurs processus opérationnels pour améliorer l'efficacité, réduire les coûts et augmenter la rentabilité.">
             <meta name="keywords" content="conseil, performance opérationnelle, optimisation, efficacité, processus, entreprise, management">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -72,46 +72,46 @@
             <link rel="icon" href="https://i.ibb.co/Y7vVhRzh/logo-fond-blanc-rond.png" type="image/png">
             <link rel="apple-touch-icon" href="https://i.ibb.co/Y7vVhRzh/logo-fond-blanc-rond.png">
         </head>
-                <!-- Legal Modal -->
-        <div id="legal-modal"
-            class="fixed inset-0 z-[999] hidden"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="legal-modal-title">
+        <body class="min-h-screen bg-white text-gray-800 antialiased">
+            <!-- Legal Modal -->
+            <div id="legal-modal"
+                class="fixed inset-0 z-[999] hidden"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="legal-modal-title">
 
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black bg-opacity-60"
-            onclick="closeLegalModal()"></div>
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-60"
+                onclick="closeLegalModal()"></div>
 
-        <!-- Modal -->
-        <div class="relative mx-auto my-6 w-[95%] max-w-3xl bg-white rounded-xl shadow-2xl flex flex-col max-h-[90vh]">
+            <!-- Modal -->
+            <div class="relative mx-auto my-6 w-[95%] max-w-3xl bg-white rounded-xl shadow-2xl flex flex-col max-h-[90vh]">
 
-            <!-- Header -->
-            <div class="flex justify-between items-center px-6 py-4 border-b">
-            <h2 id="legal-modal-title" class="text-lg font-bold text-secondary"></h2>
-            <button onclick="closeLegalModal()"
+                <!-- Header -->
+                <div class="flex justify-between items-center px-6 py-4 border-b">
+                <h2 id="legal-modal-title" class="text-lg font-bold text-secondary"></h2>
+                <button onclick="closeLegalModal()"
                     aria-label="Fermer"
                     class="text-gray-500 hover:text-gray-900 text-2xl leading-none focus:outline-none">
                 &times;
-            </button>
-            </div>
+                </button>
+                </div>
 
-            <!-- Content -->
-            <div id="legal-modal-content"
-                class="px-6 py-4 overflow-y-auto text-gray-700 text-sm leading-relaxed focus:outline-none"
-                tabindex="0">
-            </div>
+                <!-- Content -->
+                <div id="legal-modal-content"
+                    class="px-6 py-4 overflow-y-auto text-gray-700 text-sm leading-relaxed focus:outline-none"
+                    tabindex="0">
+                </div>
 
-            <!-- Footer -->
-            <div class="px-6 py-4 border-t text-right">
-            <button onclick="closeLegalModal()"
+                <!-- Footer -->
+                <div class="px-6 py-4 border-t text-right">
+                <button onclick="closeLegalModal()"
                     class="bg-primary text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-primary">
-                Fermer
-            </button>
+                    Fermer
+                </button>
+                </div>
             </div>
-        </div>
-        </div>
-        <body class="min-h-screen bg-white text-gray-800 antialiased">
+            </div>
             <!-- Header & Navigation -->
             <header class="sticky top-0 z-50 bg-white shadow-sm">
                 <nav class="container mx-auto px-6 sm:px-8 py-4">
@@ -183,7 +183,7 @@
                             <ul class="space-y-2 mb-6">
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Cartographie des processus</span>
+                                    <span>Caractérisation des irritants</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
@@ -191,7 +191,7 @@
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Benchmark sectoriel</span>
+                                    <span>Priorisation des actions</span>
                                 </li>
                             </ul>
                         </div>
@@ -206,11 +206,11 @@
                             <ul class="space-y-2 mb-6">
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Lean Management</span>
+                                    <span>Organisation des flux</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
-                                    <span>Six Sigma</span>
+                                    <span>Déploiement de méthodes efficientes</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
@@ -401,7 +401,7 @@
                             <!-- Contact Form -->
                             <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
                                 <h3 class="text-2xl font-bold text-secondary mb-6">Envoyez-nous un message</h3>
-                                <form id="contact-form" class="space-y-6">
+                                <form id="contact-form" class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
                                     <div>
                                         <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet *</label>
                                         <input type="text" id="name" name="name" required class="w-full px-6 sm:px-8 py-3 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
@@ -432,7 +432,10 @@
                                         <label for="message" class="block text-gray-700 font-medium mb-2">Message *</label>
                                         <textarea id="message" name="message" rows="5" required class="w-full px-6 sm:px-8 py-3 text-base border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
                                     </div>
-                                    
+                                    <input type="hidden" name="access_key" value="c8286c13-da05-4f89-afcb-36046b15abc6">
+                                    <input type="hidden" name="subject" value="Nouveau message depuis le site web">
+                                    <input type="hidden" name="replyto" value="{{email}}">
+                                    <input type="checkbox" name="botcheck" class="hidden" style="display:none">
                                     <button type="submit" class="w-full bg-primary text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">Envoyer le message</button>
                                 </form>
                             </div>
@@ -650,17 +653,24 @@
                 });
                 
                 // Form submission
-                document.getElementById('contact-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    
-                    // In a real application, you would send the form data to a server here
-                    // For this example, we'll just show a success message
-                    
-                    // Show success modal
-                    document.getElementById('success-modal').classList.remove('hidden');
-                    
-                    // Reset form
-                    this.reset();
+                document.getElementById('contact-form').addEventListener('submit', async function (e) {
+                    e.preventDefault();
+
+                    const formData = new FormData(this);
+
+                    const response = await fetch("https://api.web3forms.com/submit", {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    const result = await response.json();
+                        
+                    if (result.success) {
+                        document.getElementById('success-modal').classList.remove('hidden');
+                         this.reset();
+                    } else {
+                        alert("Erreur lors de l'envoi du message.");
+                    }
                 });
                 
                 // Close modal
@@ -670,12 +680,7 @@
                 
                 // Social media click handlers
                 function handleSocialClick(platform) {
-                    alert("Redirection vers notre page " + platform + " (simulée)");
-                }
-                
-                // Footer link handlers
-                function handleFooterLink(linkType) {
-                    alert("Ouverture de la page " + linkType + " (simulée)");
+                    alert("Redirection vers notre page " + platform );
                 }
                 
                 // Smooth scroll for anchor links
